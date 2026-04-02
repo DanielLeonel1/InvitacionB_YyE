@@ -1,0 +1,118 @@
+body {
+  background-image: url("../img/fondo.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* parallax simple */
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+.bg-blur::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  transform: scale(1.05); /* evita bordes */
+  z-index: -1;
+}
+
+.fade-edges {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 90%, transparent),
+                      linear-gradient(to bottom, transparent, black 6%, black 90%, transparent);
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+}
+.t-color{
+  color: #e3c7ae;
+}
+
+.t-font-titulo{
+  font-family: 'Cinzel';
+  src: url('../fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  letter-spacing: 8px;   /* interletrado */
+  line-height: 1.4;        /* interlineado */
+  text-transform: uppercase;
+}
+.t-font-text{
+  font-family: 'Cinzel';
+  src: url('../fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  letter-spacing: 2px;   /* interletrado */
+  line-height: 1.4;        /* interlineado */
+  text-transform: uppercase;
+}
+hr {
+  color: #e0a17e;
+}
+
+.borde-derecho {
+  border-right: 3px solid #c7a66d;
+}
+
+li::marker {
+  color:aliceblue;
+  font-size: 17px;
+}
+
+/* Contenedor del acordeón */
+.glass-accordion .accordion-item {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* Botón del header */
+.glass-accordion .accordion-button {
+  background: transparent;
+  color: white;
+  box-shadow: none;
+}
+
+/* Estado activo */
+.glass-accordion .accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+/* Flechita */
+.glass-accordion .accordion-button::after {
+  filter: invert(1);
+}
+
+/* Cuerpo */
+.glass-accordion .accordion-body {
+  background: transparent;
+  color: white;
+}
+
+/* EFECTO BRILLO (detalle PRO tipo iOS) */
+.glass-accordion .accordion-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.25),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+.mapa {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  filter: invert(90%) hue-rotate(180deg) brightness(90%) contrast(90%);
+}
