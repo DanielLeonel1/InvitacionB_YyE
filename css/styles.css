@@ -116,3 +116,12 @@ li::marker {
   border: 0;
   filter: invert(90%) hue-rotate(180deg) brightness(90%) contrast(90%);
 }
+
+
+
+.glass-btn {
+  background: rgba(255, 193, 7, 0.15);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
