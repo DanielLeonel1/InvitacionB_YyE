@@ -198,8 +198,10 @@
 
     // 🔥 inicia con scroll o click (igual que tu código)
     function iniciarAudio() {
+      const btn = document.getElementById('iconAudio');
       if (!audioIniciado) {
         sound.play();
+        btn.src = "./img/icons/play-circle.svg";
         audioIniciado = true;
       }
       
