@@ -204,17 +204,20 @@
       }
       
     }
-
     // 🎵 play / pause manual
     function toggleAudio() {
       const btn = document.getElementById('iconAudio');
 
-      if (audioIniciado = true) {
-        sound.pause();
+      sound.on('play', function () {
+        btn.src = "./img/icons/pause-circle.svg";
+      });
+      sound.on('pause', function () {
         btn.src = "./img/icons/play-circle.svg";
+      });
+      if (sound.playing()) {
+        sound.pause();
       } else {
         sound.play();
-        btn.src = "./img/icons/pause-circle.svg";
       }
     }
 
