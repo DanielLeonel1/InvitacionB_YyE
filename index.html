@@ -202,19 +202,14 @@
         sound.play();
         audioIniciado = true;
       }
-      if (audioIniciado){
-        btn.src = "./img/icons/play-circle.svg";
-      }else {
-        sound.play();
-        btn.src = "./img/icons/pause-circle.svg";
-      }
+      
     }
 
     // 🎵 play / pause manual
     function toggleAudio() {
       const btn = document.getElementById('iconAudio');
 
-      if (sound.playing()) {
+      if (audioIniciado = true) {
         sound.pause();
         btn.src = "./img/icons/play-circle.svg";
       } else {
