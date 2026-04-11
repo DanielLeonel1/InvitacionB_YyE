@@ -49,6 +49,23 @@ body::before {
   line-height: 1.4;        /* interlineado */
   text-transform: uppercase;
 }
+.t-font-text-posdata{
+  font-family: 'Cinzel';
+  src: url('../fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  font-size:65%;
+  letter-spacing: 1px;   /* interletrado */
+  line-height: 1;        /* interlineado */
+  text-transform: uppercase;
+}
+
+.t-font-text-2{
+  font-family: 'Cinzel';
+  src: url('../fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  font-size:85%;
+  letter-spacing: 1px;   /* interletrado */
+  line-height: 1;        /* interlineado */
+  text-transform: uppercase;
+}
 hr {
   color: #e0a17e;
 }
@@ -133,9 +150,20 @@ li::marker {
   color: #fff;
 }
 
+.btnGlass {
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
 /*  recorte de imagen */
 .carousel-item {
-  height: 60vh;
+  height: 28vh;
   max-height: 400px;
   overflow: hidden;
 }
