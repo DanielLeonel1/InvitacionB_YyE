@@ -202,6 +202,12 @@
         sound.play();
         audioIniciado = true;
       }
+      if (audioIniciado){
+        btn.src = "./img/icons/play-circle.svg";
+      }else {
+        sound.play();
+        btn.src = "./img/icons/pause-circle.svg";
+      }
     }
 
     // 🎵 play / pause manual
