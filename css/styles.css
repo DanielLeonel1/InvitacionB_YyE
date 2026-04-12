@@ -61,9 +61,9 @@ body::before {
 .t-font-text-2{
   font-family: 'Cinzel';
   src: url('../fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
-  font-size:85%;
+  font-size:90%;
   letter-spacing: 1px;   /* interletrado */
-  line-height: 1;        /* interlineado */
+  line-height: 1.5;        /* interlineado */
   text-transform: uppercase;
 }
 hr {
