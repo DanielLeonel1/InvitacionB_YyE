@@ -62,12 +62,16 @@ body::before {
   font-family: 'Cinzel';
   src: url('../fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
   font-size:90%;
-  letter-spacing: 1px;   /* interletrado */
+  letter-spacing: 1.3px;   /* interletrado */
   line-height: 1.5;        /* interlineado */
   text-transform: uppercase;
 }
 hr {
   color: #e0a17e;
+}
+
+.w-10 {
+  width: 10%;
 }
 
 .borde-derecho {
@@ -153,12 +157,12 @@ li::marker {
 .btnGlass {
 
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 /*  recorte de imagen */
